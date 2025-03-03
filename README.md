@@ -7,7 +7,6 @@
 
 ### structure :
 ```bash
-
 ├── data
 │   ├── generate.py
 │   ├── test.dcm
@@ -18,12 +17,14 @@
 │   ├── sending_to_servers.png
 │   └── specific_Instance.png
 ├── README.md
+├── requirements.txt
 ├── send.py
 └── servers
     ├── orthanc1.json
     ├── orthanc2.json
     ├── orthanc3.json
     └── start_servers.sh
+
 ```
 #installation :
 
@@ -62,6 +63,22 @@
 ![specific_Instance](https://github.com/user-attachments/assets/755a6091-1121-4e5a-bc1f-fafece141580)
 * Inspecting a specific DICOM Instance   
 
+## Limitations
+
+- The infrastructure currently sends DICOM data to every Orthanc server without differentiation.
+- No load balancing mechanism is implemented, leading to potential inefficiencies.
+- There is no monitoring or status tracking for each Orthanc server.
+- Security measures are minimal, making the system vulnerable to unauthorized access.
+- No redundancy or failover mechanism in case a server goes down.
+
+## Next Steps
+
+- Implement a load balancing mechanism to distribute DICOM data efficiently.
+- Introduce a health-check system to monitor the state of each Orthanc server.
+- Enhance security by configuring authentication, encryption, and access control.
+- Add logging and monitoring tools for better observability and debugging.
+- Explore data replication or federation between servers to ensure consistency.
+- Automate deployment and scaling using container orchestra
 
 
 
