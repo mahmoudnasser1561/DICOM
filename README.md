@@ -25,9 +25,6 @@
     ├── orthanc3.json
     └── start_servers.sh
 
-```
-#installation :
-
 ### Features:
 * Deploys multiple Orthanc servers (ORTHANC1, ORTHANC2, ORTHANC3) using custom JSON configurations.
 * A Python client (using pynetdicom) sends DICOM files to multiple servers.
