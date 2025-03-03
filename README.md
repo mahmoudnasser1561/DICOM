@@ -46,7 +46,7 @@
 * first you need to genrate DICOM Images (.dcm)
 * you can use ./data/generate.py to genrate dummy dcm Images but missing metadata will make requests fail
 * so I got some actual dcm data from [cancerimagingarchive](https://www.cancerimagingarchive.net/)
-* you can use that find that data ./data/T1_TRA_SE-69134
+* you can use that data ./data/T1_TRA_SE-69134
 * **now we are ready to send some DICOM to Orthanc servers**
 
 ### Interacting with Orthanc servers
