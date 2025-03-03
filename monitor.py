@@ -19,6 +19,18 @@ def check_server_status(server):
             total_instances += num_instances 
         else:
             print(f"[✖] {server['name']} is unreachable (Status Code: {response.status_code})")
+
+
+        system_res = requests.get(f"{server['url']}/system", auth=server["auth"], timeout=5)
+        system_info = system_res.json() if system_res.status_code == 200 else {}
+        print(f"[*] StorageCompression: {system_info.get("StorageCompression")}")
+
+        stats_res = requests.get(f"{server['url']}/statistics", auth=server["auth"], timeout=5)
+        stats_info = stats_res.json() if stats_res.status_code == 200 else {}
+
+        print(f"[*] TotalDiskSize: {stats_info.get('TotalDiskSizeMB')} MB")
+
+
     except requests.exceptions.RequestException as e:
         print(f"[✖] {server['name']} is down: {e}")
 
