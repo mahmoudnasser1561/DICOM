@@ -1,34 +1,40 @@
 import requests
+import time
 
 servers = [
-    {"name": "ORTHANC1", "url": "http://localhost:8042", "auth": ("orthanc", "orthanc")},
-    {"name": "ORTHANC2", "url": "http://localhost:8043", "auth": ("orthanc", "orthanc")},
-    {"name": "ORTHANC3", "url": "http://localhost:8044", "auth": ("orthanc", "orthanc")},
+    {"name": "Orthanc1", "url": "http://localhost:8042", "auth": ("orthanc", "orthanc"), "container": "orthanc1"},
+    {"name": "Orthanc2", "url": "http://localhost:8043", "auth": ("orthanc", "orthanc"), "container": "orthanc2"},
+    {"name": "Orthanc3", "url": "http://localhost:8044", "auth": ("orthanc", "orthanc"), "container": "orthanc3"},
 ]
+
 
 total_instances = 0  
 
 def check_server_status(server):
     global total_instances  
     try:
+        start = time.time()
         response = requests.get(f"{server['url']}/instances", auth=server["auth"], timeout=5)
+        end = time.time()
+        response_time = end - start
         
         if response.status_code == 200:
             num_instances = len(response.json())
-            print(f"[✔] {server['name']} is running. DICOM Instances: {num_instances}")
+            print(f"[*] {server['name']} is running. DICOM Instances: {num_instances}")
             total_instances += num_instances 
         else:
             print(f"[✖] {server['name']} is unreachable (Status Code: {response.status_code})")
 
+        print(f"-  Response time for {server['name']}: {response_time:.2f} seconds")
 
         system_res = requests.get(f"{server['url']}/system", auth=server["auth"], timeout=5)
         system_info = system_res.json() if system_res.status_code == 200 else {}
-        print(f"[*] StorageCompression: {system_info.get("StorageCompression")}")
+        print(f"-  StorageCompression: {system_info.get("StorageCompression")}")
 
         stats_res = requests.get(f"{server['url']}/statistics", auth=server["auth"], timeout=5)
         stats_info = stats_res.json() if stats_res.status_code == 200 else {}
 
-        print(f"[*] TotalDiskSize: {stats_info.get('TotalDiskSizeMB')} MB")
+        print(f"-  TotalDiskSize: {stats_info.get('TotalDiskSizeMB')} MB")
 
 
     except requests.exceptions.RequestException as e:
