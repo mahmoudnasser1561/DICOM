@@ -40,7 +40,7 @@
   - `ORTHANC3` → [http://localhost:8044](http://localhost:8044)
   - orthanc:orthanc
  
-* **feel free too modify json configurations to launch Orthanc servers on which free ports you have on your machine**
+* **feel free to modify json configurations to launch Orthanc servers on which free ports you have on your machine**
 
 ### Interaction with the servers:
 * first you need to genrate DICOM Images (.dcm)
@@ -54,7 +54,7 @@
 * ![sending_to_servers](https://github.com/user-attachments/assets/f9dda8db-259f-4983-847c-d9c8120d5714)
 * status (0000) !success
 
-### Uses REST API queries to inspect stored DICOM instances.
+### Uses REST API queries to inspect stored DICOM instances and query your servers.
 ![DICOM_Instances](https://github.com/user-attachments/assets/58812ef9-81df-41c3-98a4-ac6ddab6d574)
 * Inspecting DICOM Instances on a specific server
 
