@@ -1,6 +1,6 @@
 # DynamicDICOMRouter
 ### description:
-* A project to set up multiple Orthanc DICOM servers
+* A project to set up three Orthanc DICOM servers
 * DICOM C-STORE SCP Client to send DICOM data to those servers
 
   ![diagram modified](https://github.com/user-attachments/assets/25dff47c-f87e-49bf-a0fd-e6bc32b9a36c)
