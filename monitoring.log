@@ -1,0 +1,30 @@
+===== Docker Containers Status =====
+CONTAINER ID   NAMES      STATUS        PORTS
+81e018d2e5c6   orthanc3   Up 14 hours   4242/tcp, 0.0.0.0:4244->4244/tcp, :::4244->4244/tcp, 8042/tcp, 0.0.0.0:8044->8044/tcp, :::8044->8044/tcp
+fced59295ecc   orthanc2   Up 14 hours   4242/tcp, 0.0.0.0:4243->4243/tcp, :::4243->4243/tcp, 8042/tcp, 0.0.0.0:8043->8043/tcp, :::8043->8043/tcp
+74ba50aec936   orthanc1   Up 14 hours   0.0.0.0:4242->4242/tcp, :::4242->4242/tcp, 0.0.0.0:8042->8042/tcp, :::8042->8042/tcp
+
+===== Resource Usage =====
+NAME       CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+orthanc3   0.28%     41.28MiB / 13.59GiB   7.9MB / 1.61MB    4.1kB / 46.3MB
+orthanc2   0.32%     41.3MiB / 13.59GiB    7.89MB / 1.08MB   4.1kB / 46.3MB
+orthanc1   0.23%     41.83MiB / 13.59GiB   7.92MB / 1.78MB   610kB / 46.3MB
+
+===== DICOM Instance Counts =====
+Orthanc Server on port 8042 has  DICOM instances
+Orthanc Server on port 8043 has  DICOM instances
+Orthanc Server on port 8044 has  DICOM instances
+
+===== Queue Depth (Pending Jobs) =====
+Orthanc Server on port 8042 has  pending jobs
+Orthanc Server on port 8043 has  pending jobs
+Orthanc Server on port 8044 has  pending jobs
+
+===== Response Time =====
+Orthanc Server on port 8042 response time: 0.000455 seconds
+Orthanc Server on port 8043 response time: 0.000434 seconds
+Orthanc Server on port 8044 response time: 0.000430 seconds
+
+===== Container Restarts =====
+
+===== Logs for Orthanc Servers =====
