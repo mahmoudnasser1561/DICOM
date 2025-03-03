@@ -1,3 +1,4 @@
+import os
 from pynetdicom import AE, StoragePresentationContexts
 import pydicom
 
@@ -23,7 +24,10 @@ servers = [
     {"ip": "127.0.0.1", "port": 4244, "ae": "ORTHANC3"},
 ]
 
-dicom_file = "./data/test.dcm"  
+dicom_folder = "./data/T1_TRA_SE-69134"
 
-for server in servers:
-    send_dicom(dicom_file, server["ip"], server["port"], server["ae"])
+for file_name in os.listdir(dicom_folder):
+    file_path = os.path.join(dicom_folder, file_name)
+    if file_path.endswith(".dcm"):
+        for server in servers:
+            send_dicom(file_path, server["ip"], server["port"], server["ae"])
