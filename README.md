@@ -24,6 +24,7 @@
     ├── orthanc2.json
     ├── orthanc3.json
     └── start_servers.sh
+```
 
 ### Features:
 * Deploys multiple Orthanc servers (ORTHANC1, ORTHANC2, ORTHANC3) using custom JSON configurations.
