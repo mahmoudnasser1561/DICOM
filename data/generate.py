@@ -6,8 +6,14 @@ ds = quick_dataset(PatientName='John Doe', StudyDescription='Brain MRI')
 
 ds.is_little_endian = True
 ds.is_implicit_VR = False  
+
 ds.SOPClassUID = "1.2.840.10008.5.1.4.1.1.1"
 ds.SOPInstanceUID = generate_uid()
+ds.PatientID = "123456" 
+ds.StudyInstanceUID = pydicom.uid.generate_uid()  
+ds.SeriesInstanceUID = pydicom.uid.generate_uid()  
+ds.SOPInstanceUID = pydicom.uid.generate_uid()  
+ds.Modality = "CT"  # Example modality
 
 file_meta = pydicom.dataset.FileMetaDataset()
 file_meta.MediaStorageSOPClassUID = generate_uid()

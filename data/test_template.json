@@ -12,10 +12,18 @@
         "00080018": {
             "vr": "UI",
             "Value": [
-                "1.2.826.0.1.3680043.8.498.11189028402370751202821456338766329520"
+                "1.2.826.0.1.3680043.8.498.25203730832315859873421232633342692645"
             ],
             "annotation": null,
             "tag_name": "SOPInstanceUID"
+        },
+        "00080060": {
+            "vr": "CS",
+            "Value": [
+                "CT"
+            ],
+            "annotation": null,
+            "tag_name": "Modality"
         },
         "00081030": {
             "vr": "LO",
@@ -34,6 +42,30 @@
             ],
             "annotation": null,
             "tag_name": "PatientName"
+        },
+        "00100020": {
+            "vr": "LO",
+            "Value": [
+                "123456"
+            ],
+            "annotation": null,
+            "tag_name": "PatientID"
+        },
+        "0020000D": {
+            "vr": "UI",
+            "Value": [
+                "1.2.826.0.1.3680043.8.498.48774970030614246292880031524488168255"
+            ],
+            "annotation": null,
+            "tag_name": "StudyInstanceUID"
+        },
+        "0020000E": {
+            "vr": "UI",
+            "Value": [
+                "1.2.826.0.1.3680043.8.498.62185364997286284590330691864588684813"
+            ],
+            "annotation": null,
+            "tag_name": "SeriesInstanceUID"
         }
     }
 }
