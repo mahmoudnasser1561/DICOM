@@ -1,8 +1,0 @@
-{
-  "Name": "Orthanc1",
-  "DicomAet": "ORTHANC1",
-  "DicomPort": 4242,
-  "HttpPort": 8042,
-  "RemoteAccessAllowed": true
-}
-
