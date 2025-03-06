@@ -42,6 +42,7 @@
 
 ### how it works:
 * run ```docker compose up -d``` this will give you three preconfigured Orthanc servers on ports 8042, 8043, 8044
+* craete a virtualenv and install requirements.txt
 * then login to the orthanc servers
 * - **Orthanc Servers:**
   - `ORTHANC1` → [http://localhost:8042](http://localhost:8042)
