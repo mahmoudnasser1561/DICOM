@@ -75,7 +75,7 @@
 ![specific_Instance](https://github.com/user-attachments/assets/755a6091-1121-4e5a-bc1f-fafece141580)
 * Inspecting a specific DICOM Instance
 
-* you can do some monitoring using monitoy_containers.sh this will give you life data about you containers
+* you can do some monitoring using monitoy_containers.sh this will give you live data about you containers
 * monitoring data will go into monitoring.log
 
 ## Next Steps
